@@ -1,0 +1,33 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexo{
+    display: flex;
+}
+.border{
+    border: 2px solid white;
+}
+.ff{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal; ;
+}
+.ff-400{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal; ;
+}
+.ff-700{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal; ;
+}
+.invert{
+    filter: invert(1);
+}
+.hover{
+    transform: scale(1.01);
+    transition: ease-in-out 200ms;
+}
