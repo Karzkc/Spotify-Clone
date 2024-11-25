@@ -33,7 +33,7 @@
 
 body {
     height: 100%;
-    overflow-x:hidden;
+    overflow:hidden;
     width: 100vw;
     background-color: black;
 
