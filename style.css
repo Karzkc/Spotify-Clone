@@ -1,8 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url(./fonts.css);
+
+@font-face {
+    font-family: 'Spotify Mix';
+    src: url('SpotifyMix-Regular.eot');
+    src: local('Spotify Mix Regular'), local('SpotifyMix-Regular'),
+        url('SpotifyMix-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SpotifyMix-Regular.woff2') format('woff2'),
+        url('SpotifyMix-Regular.woff') format('woff'),
+        url('SpotifyMix-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+    --gray-text-color: #b3b3b3;
+    --dark-gray-bg-color: #1f1f1f;
+    --gray-border-color: #7c7c7c;
+    --dark-gray-bg-main-color: #121212;
+    --gray-bg-items-color: #2a2a2a;
+}
 
 * {
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Spotify Mix', sans-serif;
     font-weight: 500;
     font-style: normal;
     margin: 0;
@@ -10,10 +32,12 @@
 }
 
 body {
-
+    height: 100%;
+    overflow-x:hidden;
     width: 100vw;
     background-color: black;
-    overflow: hidden;
+
+
 }
 
 .navbar {
@@ -44,25 +68,28 @@ body {
     height: 48px;
     width: 48px;
     border: none;
+    outline: none;
     border-radius: 50% 50% 50% 50%;
-    background-color: #1f1f1f;
+    background-color: var(--dark-gray-bg-color);
 }
 
 .home-btn img {
     fill: currentColor;
 
+
 }
 
 .home-btn:hover {
-    border: 1px solid #7c7c7c;
+    border: 1px solid var(--gray-border-color);
     transition: 200ms ease;
     transform: scale(1.05);
+    outline: none;
 
 }
 
 .search {
-    background-color: #1f1f1f;
-    cursor: pointer;
+    background-color: var(--dark-gray-bg-color);
+
 
     width: 35vw;
 
@@ -82,7 +109,7 @@ body {
 .browse-img {
     height: 24px;
     padding-left: 12px;
-    border-inline-start: 1px solid #7c7c7c;
+    border-inline-start: 1px solid var(--gray-border-color);
 }
 
 .search input {
@@ -93,12 +120,12 @@ body {
     width: 60%;
     background: none;
     border: none;
-    
+
 }
 
 .search input::placeholder {
     color: rgb(174, 175, 169);
-    font-family: "Roboto", sans-serif;
+    font-family: 'Spotify Mix', sans-serif;
     font-weight: 400;
     font-size: 16px;
 
@@ -114,9 +141,9 @@ body {
     right: 0;
 }
 
-.search:hover{
-    
-    border: 1px solid #7c7c7c;
+.search:hover {
+
+    border: 1px solid var(--gray-border-color);
     outline: none;
     -webkit-transition: all .22s ease-in;
     transition: all .22s ease-in;
@@ -135,7 +162,7 @@ body {
 }
 
 .signin {
-    color: rgb(174, 175, 169);
+    color: var(--gray-text-color);
     right: 9%;
     margin-right: 10px;
 }
@@ -161,20 +188,32 @@ body {
 }
 
 .main {
-    height: 90vh;
-    width: 99vw;
-    padding: 10px;
+    height: 100vh;
+    width: 100vw;
+
     display: grid;
     grid-template-columns: 1.5fr 4fr;
     gap: 10px;
+
+}
+
+.lib {
+    overflow-y: scroll;
+
 }
 
 .main-child {
+    background-color: var(--dark-gray-bg-main-color);
 
+    padding: 10px;
     color: white;
 }
 
 .top-lib {
+    width: 90%;
+    position: relative;
+    left: 15px;
+    top: 10px;
     gap: 10px;
     justify-content: space-between;
 }
@@ -183,8 +222,67 @@ body {
     cursor: pointer;
     gap: 10px;
     text-decoration: none;
-    color: white;
+    color: var(--gray-text-color);
     background: none;
     border: none;
     appearance: none;
+    font-size: medium;
+}
+
+.categ {
+    position: relative;
+    top: 25px;
+    height: 50px;
+    width: 100%;
+
+}
+
+.items {
+    border-radius: 9999px;
+    background-color: var(--gray-bg-items-color);
+    height: 35px;
+
+}
+
+.plus {
+
+    height: 35px;
+    width: 35px;
+    ;
+}
+
+.lib-search {
+    color: var(--gray-text-color);
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    position: absolute;
+    top: 27%;
+}
+
+.lib-search-image {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+}
+
+.lib-list {
+    height: 100%;
+    position: absolute;
+    top: 35%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+
+}
+.list-items{
+   
+    width: 95%;
+    justify-content: space-between;
+    
 }

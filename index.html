@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search | Spotify</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utils.css">
 
 </head>
 
 <body>
-    <nav class="navbar border">
+    <nav class="navbar ">
         <div class="logo">
             <a href="#">
                 <img src="./images/logo.svg" alt="logo" height="32" width="32">
@@ -34,22 +35,79 @@
         <div class="login flex nav-right">
             Log in
         </div>
-    </nav> <br>
-    <main class="main border">
-        <div class="lib border main-child">
-            <div class="top-lib flexo border">
-                <button type="button" class="flex ff hover">
+    </nav>
+    <main class="main px-10">
+        <div class="lib  main-child bor-rad7">
+            <div class="top-lib flexo  ">
+                <button type="button" class="flex ff-700 hover-col ">
                     <img src="./images/library.svg" alt="library" height="25">
-                    <span>Your Library</span>
+                    <span class="ff-700">Your Library</span>
                 </button>
-                <button type="button" class="flex ">
-                    <img src="./images/plus.svg" alt="plus" height="21">
+                <button type="button" class="flex hover-round-bg plus">
+                    <img src="./images/plus.svg" alt="plus" height="18">
                 </button>
+            </div>
+            <div class="categ flex-10  fs-14">
+                <span class="items w-20per flex cp hover-bgcol">Playlists</span>
+                <span class="items w-20per flex cp hover-bgcol">Artists</span>
+                <span class="items w-20per flex cp hover-bgcol">Albums</span>
+                <span class="items w-35per flex cp hover-bgcol">Podcasts&Shows</span>
+            </div>
+            <div class="lib-search ">
+                <span class="hover-round-bg lib-search-image flex cp ">
+                    <img src="./images/search.svg" alt="lib-search" height="18">
+                </span>
+                <span class="flex-10 hover-col hover cp">
+                    Recents <img src="./images/recents.svg" alt="recents" height="18"></span>
+            </div>
 
+            <div class="lib-list border">
+                <div class="list-items flex border">
+                    <div class="list-img border">
+                        <img src="./images/list images/image.png" alt="list-img" height="50">
+                    </div>
+                    <div class="list-item-content">
+                        Liked Songs
+                    </div>
+                </div>
+                <div class="list-items flex border">
+                    <div class="list-img border">
+                        <img src="./images/list images/image.png" alt="list-img" height="50">
+                    </div>
+                    <div class="list-item-content">
 
+                    </div>
+                </div>
+                <div class="list-items flex border">
+                    <div class="list-img border">
+                        <img src="./images/list images/image.png" alt="list-img" height="50">
+                    </div>
+                    <div class="list-item-content">
+
+                    </div>
+                </div>
+                <div class="list-items flex border">
+                    <div class="list-img border">
+                        <img src="./images/list images/image.png" alt="list-img" height="50">
+                    </div>
+                    <div class="list-item-content">
+
+                    </div>
+                </div>
+                <div class="list-items flex border">
+                    <div class="list-img border">
+                        <img src="./images/list images/image.png" alt="list-img" height="50">
+                    </div>
+                    <div class="list-item-content">
+
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="browse-all border main-child">
+        <div class="browse-all  main-child bor-rad7">
+            <span class="fs-24 ff-700">
+                Start browsing
+            </span>
 
         </div>
     </main>

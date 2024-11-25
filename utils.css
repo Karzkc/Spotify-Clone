@@ -1,33 +1,137 @@
-.flex{
+@import url(./style.css);
+@import url(./fonts.css);
+@font-face {
+    font-family: 'Spotify Mix';
+    src: url('SpotifyMix-Regular.eot');
+    src: local('Spotify Mix Regular'), local('SpotifyMix-Regular'),
+        url('SpotifyMix-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SpotifyMix-Regular.woff2') format('woff2'),
+        url('SpotifyMix-Regular.woff') format('woff'),
+        url('SpotifyMix-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.flex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.flexo{
+.flex-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.flex-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexo {
     display: flex;
 }
-.border{
+
+.border {
     border: 2px solid white;
 }
-.ff{
-    font-family: "Roboto", sans-serif;
+
+.bor-rad7 {
+    border-radius: 7px;
+}
+
+.ff {
+    font-family: 'Spotify Mix', sans-serif;
     font-weight: 500;
-    font-style: normal; ;
+    font-style: normal;
+
 }
-.ff-400{
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal; ;
+.ff-300 {
+    font-family: 'Spotify Mix', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
 }
-.ff-700{
-    font-family: "Roboto", sans-serif;
+
+.ff-bold {
+    font-family: 'Spotify Mix', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+.ff-700 {
+    font-family: 'Spotify Mix', sans-serif;
     font-weight: 700;
-    font-style: normal; ;
+    font-style: normal;
+    ;
 }
-.invert{
+
+.fs-16 {
+    font-size: 16px;
+}
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.invert {
     filter: invert(1);
 }
-.hover{
-    transform: scale(1.01);
+
+.hover:hover {
+    transform: scale(1.02);
     transition: ease-in-out 200ms;
+}
+
+.hover-col:hover {
+    
+    color: white;
+    fill: white;
+    transition: ease-in-out 200ms;
+}
+.hover-bgcol:hover{
+    
+    background-color: #414141;
+    transition: ease-in-out 200ms;
+}
+.hover-round-bg:hover{
+    transform: scale(1.03);
+
+    border-radius: 50%;
+    background-color: #282828;
+    transition: ease-in-out 200ms;
+}
+
+.px-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.w-10per{
+    width: 10%;
+}
+.w-20per{
+    width: 20%;
+}
+.w-35per{
+    width: 35%;
+}
+.w-30per{
+    width: 30%;
+}
+.w-40per{
+    width: 40%;
+}
+.cp{
+    cursor: pointer;
 }
