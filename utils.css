@@ -112,7 +112,9 @@
     background-color: #282828;
     transition: ease-in-out 200ms;
 }
-
+.br-cir{
+    border-radius: 9999px !important;
+}
 .px-10 {
     padding-left: 10px;
     padding-right: 10px;
