@@ -1,13 +1,9 @@
 @import url(./style.css);
-@import url(./fonts.css);
+
 @font-face {
     font-family: 'Spotify Mix';
     src: url('SpotifyMix-Regular.eot');
-    src: local('Spotify Mix Regular'), local('SpotifyMix-Regular'),
-        url('SpotifyMix-Regular.eot?#iefix') format('embedded-opentype'),
-        url('SpotifyMix-Regular.woff2') format('woff2'),
-        url('SpotifyMix-Regular.woff') format('woff'),
-        url('SpotifyMix-Regular.ttf') format('truetype');
+    
     font-weight: normal;
     font-style: normal;
     font-display: swap;
