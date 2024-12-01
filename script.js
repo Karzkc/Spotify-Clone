@@ -7,7 +7,7 @@ listItems.forEach((listItem) => {
     listItem.addEventListener("mouseover", () => {
         
         playWhite.style.opacity = "1"; 
-        list_img.style.opacity = "0.6"
+        list_img.style.opacity = "0.4"
     });
 
     listItem.addEventListener("mouseout", () => {
@@ -31,3 +31,6 @@ scrollContainer.addEventListener('scroll', () => {
         categ.style.boxShadow =  'none';
     }
 });
+
+
+

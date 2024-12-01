@@ -1,4 +1,5 @@
 @import url(./style.css);
+@import url(./fonts.css);
 
 @font-face {
     font-family: 'Spotify Mix';
@@ -132,4 +133,7 @@
 }
 .cp{
     cursor: pointer;
+}
+.cpd{
+    cursor:not-allowed !important;
 }

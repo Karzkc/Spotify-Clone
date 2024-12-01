@@ -1,4 +1,5 @@
-
+@import url(./fonts.css);
+@import url(./utils.css);
 @font-face {
     font-family: 'Spotify Mix';
     src: url('SpotifyMix-Regular.eot');
@@ -10,7 +11,7 @@
 
 
 :root {
-    --gray-text-color: #b3b3b3;
+    --gray-text-color: #8e8e8e;
     --dark-gray-bg-color: #1f1f1f;
     --gray-border-color: #7c7c7c;
     --dark-gray-bg-main-color: #121212;
@@ -335,7 +336,7 @@ body {
 }
 .list-img img[alt="play-white"]{
     position: absolute;
-    height: 18px;
+    height: 20px;
     opacity: 0;
     
 }
