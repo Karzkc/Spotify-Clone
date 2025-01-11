@@ -1,9 +1,11 @@
 @import url(./fonts.css);
 @import url(./utils.css);
+@import url(./color-themes.css);
+
 @font-face {
     font-family: 'Spotify Mix';
     src: url('SpotifyMix-Regular.eot');
-    
+
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -16,6 +18,12 @@
     --gray-border-color: #7c7c7c;
     --dark-gray-bg-main-color: #121212;
     --gray-bg-items-color: #2a2a2a;
+    --pink-bg-color: rgb(220,20,140);
+    --purple-bg-color: rgb(132,0,231);
+    --green-bg-color: rgb(0,100,80);
+    --light-green-bg-color:rgb(20,138,8);
+    --navy-blue-bg-color:rgb(30,50,100);
+    --orange-bg-color:rgb(186,93,7);
 }
 
 * {
@@ -167,7 +175,7 @@ body {
     color: black;
     right: 2%;
     margin-left: 10px;
-    background: white;
+    background-color: white;
     border-radius: 5000px;
 }
 
@@ -230,8 +238,8 @@ body {
     top: 25px;
     height: 50px;
     width: 100%;
-    
-    
+
+
 
 }
 
@@ -287,35 +295,6 @@ body {
     flex-direction: column;
     align-items: center;
 
-
-
-
-}
-
-.search_list:hover::-webkit-scrollbar {
-    width: 15px;
-    visibility: visible;
-
-
-}
-
-.search_list::-webkit-scrollbar {
-    width: 15px;
-    visibility: hidden;
-    transition: ease-in-out 1s;
-
-}
-
-.search_list::-webkit-scrollbar-thumb {
-    transition: all 400ms ease-in-out;
-    background-color: #b3b3b350;
-    opacity: 0.8;
-
-}
-
-.search_list:hover::-webkit-scrollbar-thumb:hover {
-
-    background-color: var(--gray-text-color);
 }
 
 .list-items {
@@ -325,20 +304,21 @@ body {
     cursor: pointer;
     border-radius: 5px;
     padding: 8px;
-    
+
 }
 
 .list-items:hover {
     background-color: #272727;
     transition: ease-in-out 200ms;
-    
+
     transition: ease-in-out;
 }
-.list-img img[alt="play-white"]{
+
+.list-img img[alt="play-white"] {
     position: absolute;
     height: 20px;
     opacity: 0;
-    
+
 }
 
 .list-item-content {
@@ -352,7 +332,7 @@ body {
 
 .list-img img {
     border-radius: 5px;
-    
+
 }
 
 .list-img {
@@ -372,11 +352,13 @@ body {
     color: var(--gray-text-color);
     font-size: 14px;
 }
-.browse{
+
+.browse {
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+
 .browse:hover::-webkit-scrollbar {
     width: 15px;
     visibility: visible;
@@ -384,24 +366,29 @@ body {
 
 }
 
-.browse::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 15px;
     visibility: hidden;
-   
+
 
 }
 
-.browse::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     transition: all 400ms ease-in-out;
     background-color: #b3b3b350;
     opacity: 0.8;
 
 }
 
-.browse:hover::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
 
     background-color: var(--gray-text-color);
 }
+
+::-webkit-scrollbar-thumb:active {
+    cursor: grab;
+}
+
 .start-browse {
     position: relative;
     top: 10%;
@@ -412,9 +399,9 @@ body {
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
+
     top: 18%;
-    height: 170px;
+    height: 150px;
     width: 75%;
     gap: 20px;
 }
@@ -425,17 +412,49 @@ body {
     position: relative;
     top: 10%;
     width: 100%;
+    
 }
-.lower-categ{
+
+.lower-categ {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    
+    margin-top: 20px;
     gap: 20px;
 }
-.browse-item{
-    height: 170px;
+
+.browse-item {
+    cursor: pointer;
+    position: relative;
+    height: 150px;
+    border-radius: 7px;
+    overflow: hidden;
 }
+.browse-item:hover{
+    transform: scale(1.02);
+    transition: ease-in-out 200ms;
+}
+.browse-list-span{
+    font-size: 130%;
+    font-weight: 700;
+    position: absolute;
+    top:12%;
+    left: 8%;
+    
+}
+.browse-list-img{
+    position: absolute;
+    border-radius: 4px;
+    width: 40%;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(25deg) translate(18%, -2%);
+    transform: rotate(25deg) translate(18%, -2%); 
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+}
+
+
 .footer {
     position: relative;
     bottom: 10px;
@@ -448,35 +467,41 @@ body {
     padding: 10px;
 }
 
-.left-player{
+.left-player {
     width: 100%;
     height: 80px;
 }
-.middle-player{
+
+.middle-player {
     width: 100%;
     height: 80px;
-    
+
 }
-.top-controls{
+
+.top-controls {
     gap: 20px;
 }
-.middle-player img{
-    
+
+.middle-player img {
+
     height: 17px;
 }
-.right-player{
+
+.right-player {
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.play{
+
+.play {
     background-color: white;
     height: 30px;
     width: 30px;
     border-radius: 9999px;
 }
-.play img[alt="resume"]{
+
+.play img[alt="resume"] {
     display: none;
 }

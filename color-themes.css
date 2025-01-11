@@ -1,0 +1,50 @@
+@import url(./style.css);
+@import url(./utils.css);
+.Music{
+    background-color: var(--pink-bg-color);
+}
+.Podcasts{
+    background-color: var(--green-bg-color);
+}
+.Live{
+    background-color: var(--purple-bg-color);
+}
+.Music {
+    background-color: var(--pink-bg-color);
+}
+.Podcasts {
+    background-color: var(--green-bg-color);
+}
+.Live {
+    background-color: var(--purple-bg-color);
+}
+.Music2024 {
+    background-color: var(--navy-blue-bg-color);
+}
+.Podcasts2024 {
+    background-color: var(--orange-bg-color);
+}
+.MadeForYou {
+    background-color: var(--light-green-bg-color);
+}
+.NewReleases {
+    background-color: var(--purple-bg-color);
+}
+.Hindi {
+    background-color: var(--pink-bg-color);
+}
+.Punjabi {
+    background-color: var(--green-bg-color);
+}
+.Tamil {
+    background-color: var(--orange-bg-color);
+}
+.Telugu {
+    background-color: var(--navy-blue-bg-color);
+}
+.PodcastCharts {
+    background-color: var(--purple-bg-color);
+}
+.PodcastNewReleases {
+    background-color: var(--light-green-bg-color);
+}

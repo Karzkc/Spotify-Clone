@@ -1,5 +1,6 @@
 @import url(./style.css);
 @import url(./fonts.css);
+@import url(./color-themes.css);
 
 @font-face {
     font-family: 'Spotify Mix';
