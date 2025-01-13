@@ -1,0 +1,137 @@
+@import url(./fonts.css);
+@import url(./utils.css);
+@import url(./media_query.css);
+@import url(./color-themes.css);
+
+.navbar {
+    margin: auto;
+    justify-content: space-around;
+    height: 10vh;
+    width: 99vw;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    left: 2%;
+    position: absolute;
+}
+
+.home {
+    position: absolute;
+    left: 30%;
+    margin-right: 10px;
+}
+
+.home-btn {
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    border: none;
+    outline: none;
+    border-radius: 50% 50% 50% 50%;
+    background-color: var(--dark-gray-bg-color);
+}
+
+.home-btn img {
+    fill: currentColor;
+}
+
+.home-btn:hover {
+    border: 1px solid var(--gray-border-color);
+    transition: 200ms ease;
+    transform: scale(1.05);
+    outline: none;
+}
+
+.search {
+    background-color: var(--dark-gray-bg-color);
+    width: 35vw;
+    height: 48px;
+    border-radius: 500px;
+    position: absolute;
+    left: 34%;
+    margin-left: 10px;
+}
+
+.search-img {
+    margin-right: 10px;
+    position: absolute;
+    left: 15px;
+}
+
+.browse-img {
+    height: 24px;
+    padding-left: 12px;
+    border-inline-start: 1px solid var(--gray-border-color);
+}
+
+.search input {
+    position: absolute;
+    left: 10%;
+    color: white;
+    outline: none;
+    width: 60%;
+    background: none;
+    border: none;
+}
+
+.search input::placeholder {
+    color: rgb(174, 175, 169);
+    font-family: 'Spotify Mix', sans-serif;
+    font-weight: 400;
+    font-size: 1.3vw;
+}
+
+.search button {
+    background: none;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+.search:hover {
+    border: 1px solid var(--gray-border-color);
+    outline: none;
+    -webkit-transition: all .22s ease-in;
+    transition: all .22s ease-in;
+    transition: all .1s ease-in;
+    -webkit-transition-delay: .1s;
+    transition-delay: .1s;
+    background-color: #2a2a2a;
+}
+
+
+.nav-right {
+    position: absolute;
+    width: 7vw;
+    height: 50px;
+}
+
+.signin {
+    color: var(--gray-text-color);
+    right: 9%;
+    margin-right: 10px;
+}
+
+.login {
+    color: black;
+    right: 2%;
+    margin-left: 10px;
+    background-color: #fff;
+    border-radius: 5000px;
+}
+
+.signin:hover {
+    color: white;
+    transform: scale(1.05);
+    transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) 200ms transform;
+}
+
+.login:hover {
+    transform: scale(1.05);
+    transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) 200ms transform;
+}

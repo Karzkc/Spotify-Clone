@@ -1,0 +1,54 @@
+@import url(./fonts.css);
+@import url(./utils.css);
+@import url(./media_query.css);
+@import url(./color-themes.css);
+@import url(./navbar.css);
+
+.footer {
+    position: relative;
+    bottom: 10px;
+    width: 100vw;
+    height: 18vh;
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 10px;
+}
+
+.left-player {
+    width: 100%;
+    height: 80px;
+}
+
+.middle-player {
+    width: 100%;
+    height: 80px;
+}
+
+.top-controls {
+    gap: 20px;
+}
+
+.middle-player img {
+    height: 17px;
+}
+
+.right-player {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.play {
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 9999px;
+}
+
+.play img[alt="resume"] {
+    display: none;
+}
