@@ -1,8 +1,3 @@
-@import url(./fonts.css);
-@import url(./utils.css);
-@import url(./media_query.css);
-@import url(./color-themes.css);
-@import url(./navbar.css);
 
 .footer {
     position: relative;
