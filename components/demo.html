@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="utils.css">
+</head>
+
+<body>
+    <div class="close border">
+        <!-- Upper logo -->
+        <div class="close-icon border ">
+            <img src="../images/library_close.svg" alt="close" height="50px">
+        </div>
+        <!-- List of images -->
+        <div class="close-img ">
+            <div class="close-list">
+                <img src="../images/list images/1wannabe.png" alt="wannabe" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/2careless.png" alt="careless" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/3cheri.png" alt="cheri" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/4excuses.png" alt="excuses" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/5lemonade.png" alt="lemonade" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/6onedance.png" alt="one dance" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/7phir.png" alt="phir" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/8jeena.png" alt="jeena" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/9woh.png" alt="woh lamhe" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/10zara.png" alt="zara sa" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/artist1.png" alt="Mohammed Rafi" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/artist2.png" alt="Armaan Malik" height="50">
+            </div>
+            <div class="close-list">
+                <img src="../images/list images/artist3.png" alt="Arijit Singh" height="50">
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    (function close_items_hover() {
+        let closeItems = document.querySelectorAll(".close-items"); // Adjusted selector for close divs
+        
+        closeItems.forEach((closeItem) => {
+            let playWhite = closeItem.querySelector("img[alt='play-white']");
+            let close_img = closeItem.querySelector(".close-img img"); // Adjusted for close divs
+
+            // Hover effects for close divs
+            closeItem.addEventListener("mouseover", () => {
+                playWhite.style.opacity = "1"; 
+                close_img.style.opacity = "0.4";
+            });
+
+            closeItem.addEventListener("mouseout", () => {
+                playWhite.style.opacity = "0"; 
+                close_img.style.opacity = "1";
+            });
+
+            // Optional: Programmatic close/reset mechanism
+            function resetHoverEffects() {
+                playWhite.style.opacity = "0"; 
+                close_img.style.opacity = "1";
+            }
+
+            // Example: Add a global event listener for resetting hover effects
+            document.addEventListener("resetCloseHoverEffects", () => resetHoverEffects());
+        });
+    })();
+
+    // Example function to trigger reset of hover effects programmatically
+    function triggerResetCloseHover() {
+        const resetEvent = new Event("resetCloseHoverEffects");
+        document.dispatchEvent(resetEvent);
+    }
+
+    // Example: Call this function on a specific action (e.g., button click)
+    // triggerResetCloseHover();
+</script>
+
+
+</html>
