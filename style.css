@@ -135,6 +135,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .list-items {
@@ -144,12 +145,12 @@ body {
     cursor: pointer;
     border-radius: 5px;
     padding: 8px;
+    margin-right: 3px;
 }
 
 .list-items:hover {
     background-color: #272727;
     transition: ease-in-out 200ms;
-    transition: ease-in-out;
 }
 
 .list-img img[alt="play-white"] {
@@ -169,7 +170,7 @@ body {
 .list-img img {
     border-radius: 5px;
 }
-
+    
 .list-img {
     display: flex;
     justify-content: center;
