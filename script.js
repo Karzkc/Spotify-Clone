@@ -76,8 +76,55 @@
                 item.style.justifyContent = 'flex-start';
             });
         }
-        lib.style.transition = 'width 400ms ease-in-out';
-        searchList.style.transition = '400ms ease-in-out';
-        main.style.transition = 'grid-template-columns 400ms ease-in-out';
+        lib.style.transition = 'width 300ms ease-in-out';
+        searchList.style.transition = '300ms ease-in-out';
+        main.style.transition = 'grid-template-columns 300ms ease-in-out';
     });
 })();
+
+async function get_songs() {
+    let f = await fetch("http://127.0.0.1:3000/songs/")
+    let res = await f.text()
+    // console.log(res);
+    let new_div = document.createElement("div")
+    new_div.innerHTML = res
+    let links = new_div.getElementsByTagName("a")
+    let songs = []
+    for (let i = 0; i < links.length; i++) {
+        const element = links[i];
+        if (element.href.endsWith(".mp3")) {
+            songs.push(element.href)
+        }   
+    }
+    return songs
+}
+(async function play_songs() {
+    let button = document.querySelector(".play")
+    let play = document.querySelector(".played")
+    let pause = document.querySelector(".paused")
+    let songs = await get_songs()
+    // console.log(songs);
+    let audio = new Audio(songs[0])
+    let playing = true
+    
+    button.addEventListener('click',()=>{
+        if (playing) {
+            audio.play()
+            playing = false
+            console.log("playing");
+            play.style.display = "none"
+            pause.style.display = "inline"
+        }
+        else if (!playing) {
+            audio.pause()
+            playing = true
+            console.log("pausing");
+            play.style.display = "inline"
+            pause.style.display = "none"
+            
+        }
+        
+    })
+    
+    
+})()
