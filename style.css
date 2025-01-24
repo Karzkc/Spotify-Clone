@@ -43,7 +43,7 @@ body {
 }
 
 .main {
-    height: 75vh;
+    height: 78vh;
     width: 100vw;
     display: grid;
     grid-template-columns: 1.55fr 4fr;

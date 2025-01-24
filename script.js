@@ -94,37 +94,64 @@ async function get_songs() {
         const element = links[i];
         if (element.href.endsWith(".mp3")) {
             songs.push(element.href)
-        }   
+        }
     }
     return songs
 }
 (async function play_songs() {
-    let button = document.querySelector(".play")
-    let play = document.querySelector(".played")
-    let pause = document.querySelector(".paused")
-    let songs = await get_songs()
-    // console.log(songs);
-    let audio = new Audio(songs[0])
-    let playing = true
-    
-    button.addEventListener('click',()=>{
-        if (playing) {
-            audio.play()
-            playing = false
-            console.log("playing");
-            play.style.display = "none"
-            pause.style.display = "inline"
+
+    let button = document.querySelector(".play");
+    let play = document.querySelector(".played");
+    let pause = document.querySelector(".paused");
+    let start = document.querySelector(".start-time");
+    let end = document.querySelector(".end-time");
+    let seekBar = document.querySelector(".seekbar");
+    let circle = document.querySelector(".circle");
+
+    let songs = await get_songs();
+    let audio = new Audio(songs[0]);
+    let playing = false;
+
+    function formatTime(seconds) {
+        let minutes = Math.floor(seconds / 60);
+        let secs = seconds % 60;
+        return `${minutes}:${secs < 10 ? "0" + secs : secs}`;
+    }
+
+
+    audio.addEventListener("loadedmetadata", () => {
+        let duration = Math.floor(audio.duration);
+        end.innerHTML = formatTime(duration);
+    });
+
+    let seekBarWidth = seekBar.offsetWidth;
+    setInterval(() => {
+        if (!playing) return;
+        start.innerHTML = formatTime(Math.floor(audio.currentTime));
+
+        let progress = (audio.currentTime / audio.duration) * seekBarWidth;
+        circle.style.transform = `translateX(${progress}px)`;
+    }, 1000);
+
+    button.addEventListener("click", () => {
+        if (!playing) {
+            audio.play();
+            playing = true;
+            play.style.display = "none";
+            pause.style.display = "inline";
+        } else {
+            audio.pause();
+            playing = false;
+            play.style.display = "inline";
+            pause.style.display = "none";
         }
-        else if (!playing) {
-            audio.pause()
-            playing = true
-            console.log("pausing");
-            play.style.display = "inline"
-            pause.style.display = "none"
-            
-        }
-        
-    })
-    
-    
-})()
+    });
+    start.style.color = "#8e8e8e";
+    start.style.margin = "5px";
+    end.style.color = "#8e8e8e";
+    end.style.margin = "5px";
+})();
+
+
+
+
